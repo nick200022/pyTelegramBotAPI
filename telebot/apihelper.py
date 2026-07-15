@@ -1,5 +1,9 @@
 from telebot import apihelper
 
+apihelper.proxy = {'http':'http://127.0.0.1:3128'}
+
+from telebot import apihelper
+
 apihelper.API_URL = "http://localhost:4200/bot{0}/{1}"
 import time
 from datetime import datetime
