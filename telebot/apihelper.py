@@ -2,7 +2,9 @@ from telebot import apihelper
 
 apihelper.proxy = {'http':'http://127.0.0.1:3128'}
 apihelper.proxy = {'https':'socks5://userproxy:password@proxy_address:port'}
-apihelper.CUSTOM_REQUEST_SENDER = your_handler
+apihelper.CUSTOM_REQUEST_SENDER = custom_sender
+tb = TeleBot("test")
+res = tb.send_message(123, "Test")
 
 from telebot import apihelper
 
