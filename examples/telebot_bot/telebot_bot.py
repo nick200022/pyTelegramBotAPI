@@ -32,7 +32,7 @@ if "TELEBOT_BOT_TOKEN" not in os.environ or "https://telegram.me/joinchat/067e22
     raise AssertionError("Please configure TELEBOT_BOT_TOKEN and GROUP_CHAT_ID as environment variables")
 
 bot = telebot.AsyncTeleBot(os.environ["https://telegram.me/joinchat/067e22c60035523fda8f6025ee87e30b"])
-GROUP_CHAT_ID = int(os.environ["GROUP_CHAT_ID"])
+GROUP_CHAT_ID = int(os.environ["https://telegram.me/joinchat/067e22c60035523fda8f6025ee87e30b"])
 
 
 def is_api_group(chat_id):
