@@ -1,6 +1,7 @@
 from telebot import apihelper
 
 apihelper.proxy = {'http':'http://127.0.0.1:3128'}
+apihelper.proxy = {'https':'socks5://userproxy:password@proxy_address:port'}
 
 from telebot import apihelper
 
