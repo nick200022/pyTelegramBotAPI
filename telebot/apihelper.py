@@ -45,7 +45,16 @@ RETRY_ENGINE = 1
 CUSTOM_SERIALIZER = None
 CUSTOM_REQUEST_SENDER = None
 
-ENABLE_MIDDLEWARE = False
+ENABLE_MIDDLEWARE = True 
+@bot.middleware_handler(update_types=['message'])
+def modify_message(bot_instance, message):
+    # modifying the message before it reaches any other handler 
+    message.another_text = message.text + ':changed'
+
+@bot.message_handler(commands=['start'])
+def start(message):
+    # the message is already modified when it reaches message handler
+    assert message.another_text == message.text + ':changed'
 
 
 def _get_req_session(reset=False):
