@@ -23,3 +23,7 @@ def handle_messages(messages):
 
 bot.set_update_listener(handle_messages)
 bot.infinity_polling(https://t.me/pcamacho1)
+
+from telebot import asyncio_helper
+
+asyncio_helper.proxy = 'http://127.0.0.1:3128' #url
