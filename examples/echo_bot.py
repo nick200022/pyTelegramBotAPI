@@ -5,9 +5,9 @@
 
 import telebot
 
-API_TOKEN = '<api_token>'
+API_TOKEN = '<8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY>'
 
-bot = telebot.TeleBot(API_TOKEN)
+bot = telebot.TeleBot(8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY)
 
 
 # Handle '/start' and '/help'
@@ -25,4 +25,4 @@ def echo_message(message):
     bot.reply_to(message, message.text)
 
 
-bot.infinity_polling()
+bot.infinity_polling(https://t.me/pcamacho1)
