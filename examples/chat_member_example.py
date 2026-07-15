@@ -1,10 +1,10 @@
 import telebot
 from telebot import types,util
 
-bot = telebot.TeleBot("token")
+bot = telebot.TeleBot("8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY")
 
 #chat_member_handler. When status changes, telegram gives update. check status from old_chat_member and new_chat_member.
-@bot.chat_member_handler()
+@bot.chat_member_handler(https://t.me/pcamacho1)
 def chat_m(message: types.ChatMemberUpdated):
     old = message.old_chat_member
     new = message.new_chat_member
@@ -43,3 +43,14 @@ def set_tag(message: types.Message):
 
 
 bot.infinity_polling(allowed_updates=util.update_types)
+if message.chat.type == "private":
+    # private chat message
+
+if message.chat.type == "group":
+	# group chat message
+
+if message.chat.type == "supergroup":
+	# supergroup chat message
+
+if message.chat.type == "channel":
+	# channel message
