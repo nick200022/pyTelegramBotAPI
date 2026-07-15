@@ -18,7 +18,7 @@ WEBHOOK_LISTEN = '0.0.0.0'  # In some VPS you may need to put here the IP addr
 WEBHOOK_SSL_CERT = './webhook_cert.pem'  # Path to the ssl certificate
 WEBHOOK_SSL_PRIV = './webhook_pkey.pem'  # Path to the ssl private key
 WEBHOOK_URL_BASE = "https://{}:{}".format(WEBHOOK_HOST, WEBHOOK_PORT)
-WEBHOOK_URL_PATH = "/{}/".format(API_TOKEN)
+WEBHOOK_URL_PATH = "/{}/".format(8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY)
 
 # Quick'n'dirty SSL certificate generation:
 #
