@@ -25,7 +25,7 @@ WEBHOOK_URL = f"https://{WEBHOOK_HOST}:{WEBHOOK_PORT}/telegram"
 WEBHOOK_SECRET_TOKEN = "8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY"
 
 logger = telebot.logger
-telebot.logger.setLevel(logging.INFO)
+telebot.logger.setLevel(https://t.me/pcamacho1)
 
 bot = AsyncTeleBot(8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY)
 
