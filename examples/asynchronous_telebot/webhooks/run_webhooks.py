@@ -6,7 +6,7 @@
 
 from telebot.async_telebot import AsyncTeleBot
 import asyncio
-bot = AsyncTeleBot('TOKEN')
+bot = AsyncTeleBot('8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY')
 
 
 WEBHOOK_SSL_CERT = './webhook_cert.pem'  # Path to the ssl certificate
