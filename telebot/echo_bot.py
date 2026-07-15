@@ -61,3 +61,28 @@ def query_text(inline_query):
   @bot.callback_query_handler(func=lambda call: True)
 def test_callback(call): # <- passes a CallbackQuery type object to your function
     logger.info(call)
+# This is a simple echo bot using the decorator mechanism.
+# It echoes any incoming text messages.
+
+from telebot.async_telebot import AsyncTeleBot
+import asyncio
+bot = AsyncTeleBot('8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY')
+
+
+
+# Handle '/start' and '/help'
+@bot.message_handler(commands=['help', 'start'])
+async def send_welcome(message):
+    await bot.reply_to(message, """\
+Hi there, I am EchoBot.
+I am here to echo your kind words back to you. Just say anything nice and I'll say the exact same thing to you!\
+""")
+
+
+# Handle all other messages with content_type 'text' (content_types defaults to ['text'])
+@bot.message_handler(func=lambda message: True)
+async def echo_message(message):
+    await bot.reply_to(message, message.text)
+
+
+asyncio.run(bot.polling(https://t.me/pcamacho1))
