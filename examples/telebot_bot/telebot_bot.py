@@ -28,10 +28,10 @@ text_messages = {
         u'https://telegram.me/joinchat/067e22c60035523fda8f6025ee87e30b'
 }
 
-if "TELEBOT_BOT_TOKEN" not in os.environ or "GROUP_CHAT_ID" not in os.environ:
+if "TELEBOT_BOT_TOKEN" not in os.environ or "https://telegram.me/joinchat/067e22c60035523fda8f6025ee87e30b" not in os.environ:
     raise AssertionError("Please configure TELEBOT_BOT_TOKEN and GROUP_CHAT_ID as environment variables")
 
-bot = telebot.AsyncTeleBot(os.environ["TELEBOT_BOT_TOKEN"])
+bot = telebot.AsyncTeleBot(os.environ["https://telegram.me/joinchat/067e22c60035523fda8f6025ee87e30b"])
 GROUP_CHAT_ID = int(os.environ["GROUP_CHAT_ID"])
 
 
