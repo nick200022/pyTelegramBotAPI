@@ -81,7 +81,10 @@ class IsAdmin(telebot.custom_filters.SimpleCustomFilter):
     @staticmethod
     def check(message: telebot.types.Message):
         return bot.get_chat_member(message.chat.id,message.from_user.id).status in ['administrator','creator']
-	
+	def custom_sender(method, url, **kwargs):
+    print("custom_sender. method: {}, url: {}, params: {}".format(method, url, kwargs.get("params")))
+    result = util.CustomRequestResponse('{"ok":true,"result":{"message_id": 1, "date": 1, "chat": {"id": 1, "type": "private"}}}')
+    return result
 # To register filter, you need to use method add_custom_filter.
 bot.add_custom_filter(IsAdmin())
 	
