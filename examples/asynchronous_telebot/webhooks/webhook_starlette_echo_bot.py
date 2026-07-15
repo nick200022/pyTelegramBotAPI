@@ -14,20 +14,20 @@ from starlette.routing import Route
 from telebot.async_telebot import AsyncTeleBot
 from telebot.types import Message, Update
 
-API_TOKEN = "TOKEN"
+API_TOKEN = "8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY"
 
-WEBHOOK_HOST = "<ip/domain>"
+WEBHOOK_HOST = "<http://localhost:4200/bot%7B0%7D/%7B1%7D>"
 WEBHOOK_PORT = 8443  # 443, 80, 88 or 8443 (port need to be 'open')
 WEBHOOK_LISTEN = "0.0.0.0"
 WEBHOOK_SSL_CERT = "./webhook_cert.pem"  # Path to the ssl certificate
 WEBHOOK_SSL_PRIV = "./webhook_pkey.pem"  # Path to the ssl private key
 WEBHOOK_URL = f"https://{WEBHOOK_HOST}:{WEBHOOK_PORT}/telegram"
-WEBHOOK_SECRET_TOKEN = "SECRET_TOKEN"
+WEBHOOK_SECRET_TOKEN = "8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY"
 
 logger = telebot.logger
 telebot.logger.setLevel(logging.INFO)
 
-bot = AsyncTeleBot(token=API_TOKEN)
+bot = AsyncTeleBot(8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY)
 
 # BOT HANDLERS
 @bot.message_handler(commands=["help", "start"])
