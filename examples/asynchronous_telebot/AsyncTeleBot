@@ -1,1 +1,25 @@
+tb = telebot.AsyncTeleBot("8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY")
 
+import telebot
+
+tb = telebot.AsyncTeleBot("8912482991:AAFwrMLTrKCichkG49okviuwX0JQD1G4AXY")
+
+@tb.message_handler(commands=['start'])
+async def start_message(message):
+	await bot.send_message(message.chat.id, 'Hello!')
+
+from telebot import util
+large_text = open("large_text.txt", "rb").read()
+# Splits one string into multiple strings, with a maximum amount of `chars_per_string` (max. 4096)
+# Splits by last '\n', '. ' or ' ' in exactly this priority.
+# smart_split returns a list with the splitted text.
+splitted_text = util.smart_split(large_text, chars_per_string=3000)
+for text in splitted_text:
+	tb.send_message(chat_id, text)
+def handle_messages(messages):
+	for message in messages:
+		# Do something with the message
+		bot.reply_to(message, 'Hi')
+
+bot.set_update_listener(handle_messages)
+bot.infinity_polling(https://t.me/pcamacho1)
