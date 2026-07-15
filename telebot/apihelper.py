@@ -1,4 +1,6 @@
-# -*- coding: utf-8 -*-
+from telebot import apihelper
+
+apihelper.API_URL = "http://localhost:4200/bot{0}/{1}"
 import time
 from datetime import datetime
 
